@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -12,32 +13,101 @@
     <a href="../projects/index.html">Projects</a>
     <a href="../contact/index.html">Contact</a>
     <a href="https://github.com/bnie13" target="_blank">Github</a>
-    <a href="../resume/index.html">Resume</a>
+    <a href="../resume/index.html" class="current">Resume</a>
 </nav>
 
 <h1>Bruce Nie</h1>
 
+<p>
+    <a href="mailto:bnie@ucsd.edu">bnie@ucsd.edu</a> |
+    <a href="tel:4153200832">(415) 320-0832</a> |
+    <a href="https://www.linkedin.com/in/bruce-nie" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/bnie13" target="_blank">GitHub</a>
+</p>
+
 <section>
     <h2>Education</h2>
-    <p>UC San Diego — Data Science</p>
+    <article>
+        <h3>University of California, San Diego (UCSD)</h3>
+        <p><strong>B.S. in Data Science</strong></p>
+        <p><time>Expected June 2027</time></p>
+        <p>
+            Relevant Coursework: Data Structures & Algorithms, Data Cleaning, Data Visualization,
+            Linear Algebra, Multivariable Calculus, Object-Oriented Programming
+        </p>
+    </article>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <article>
+        <p><strong>Languages:</strong> Python, Java</p>
+        <p><strong>Libraries:</strong> Pandas, NumPy, Matplotlib, Plotly</p>
+        <p><strong>Databases & Tools:</strong> Git/GitHub, Jupyter Notebooks, VS Code, IntelliJ, PyCharm</p>
+        <p><strong>Additional:</strong> English (Fluent), Mandarin (Fluent)</p>
+    </article>
 </section>
 
 <section>
     <h2>Experience</h2>
     <article>
-        <h3>Research Assistant</h3>
-        <p>Worked on machine learning models for biological data.</p>
+        <header>
+            <h3>UC San Diego — Research Assistant (Pengtao Xie Lab)</h3>
+            <p><time>Sep. 2025 - Dec. 2025</time></p>
+        </header>
+        <ul>
+            <li>Built and evaluated watermarking frameworks for protein sequence generation using ProteinMPNN and Python.</li>
+            <li>Implemented multiple algorithms including Token-Specific, KGW, Gumbel, and Soft, and benchmarked them using metrics such as TPR, FPR, and Z-score separation.</li>
+            <li>Conducted statistical validation of biological realism using Kolmogorov-Smirnov tests on structural features.</li>
+            <li>Found that context-dependent watermarking preserved biological validity while context-free methods degraded structural properties.</li>
+            <li>Resolved a critical off-by-one indexing bug, increasing detection accuracy from 0% to 100%.</li>
+        </ul>
     </article>
 </section>
 
 <section>
     <h2>Projects</h2>
-    <ul>
-        <li>NBA Data Analysis</li>
-        <li>Pokemon Battle Simulator</li>
-    </ul>
-</section>
 
+    <article>
+        <header>
+            <h3>NBA True Shooting Percentage Analysis</h3>
+            <p><time>Apr. 2025</time></p>
+        </header>
+        <p>Python, Pandas, NumPy, Matplotlib, Jupyter Notebooks, GitHub</p>
+        <ul>
+            <li>Analyzed player data to identify which statistics most strongly influence True Shooting Percentage across multiple NBA seasons.</li>
+            <li>Cleaned and transformed thousands of player records, filtering by minutes played and at least 30 games played for more reliable comparisons.</li>
+            <li>Visualized relationships between usage rate, three-point attempts, and scoring efficiency using Matplotlib scatter plots and histograms.</li>
+            <li>Interpreted trends in player development and shot selection to communicate actionable insights on scoring efficiency.</li>
+        </ul>
+    </article>
+
+    <article>
+        <header>
+            <h3>Rush Hour Puzzle Game</h3>
+            <p><time>May 2024</time></p>
+        </header>
+        <p>Java, GUI (Swing), OOP, DFS Algorithm, Backtracking</p>
+        <ul>
+            <li>Created an interactive version of the classic Rush Hour puzzle with draggable vehicles and real-time move validation.</li>
+            <li>Implemented an auto-solver using DFS and backtracking for optimal pathfinding.</li>
+            <li>Designed a clean interface with reset and auto-solve shortcuts, combining user interaction with algorithmic problem-solving.</li>
+        </ul>
+    </article>
+
+    <article>
+        <header>
+            <h3>Pokémon Battle Simulator</h3>
+            <p><time>Mar. 2024</time></p>
+        </header>
+        <p>Java, OOP, Data Structures, GUI (Swing), CSV I/O</p>
+        <ul>
+            <li>Built a turn-based Pokémon battle simulator using real CSV datasets and modular object-oriented architecture.</li>
+            <li>Implemented mechanics for switching Pokémon, using items, and applying damage formulas.</li>
+            <li>Structured reusable classes for Pokémon stats, moves, and trainer logic to support future feature expansion.</li>
+        </ul>
+    </article>
+</section>
 
 </body>
 </html>
