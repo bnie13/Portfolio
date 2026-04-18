@@ -2,6 +2,10 @@
   --color-accent: oklch(65% 50% 260);
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.5;
@@ -14,9 +18,10 @@ body {
 /* NAV BAR */
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -24,19 +29,21 @@ nav a {
   text-decoration: none;
   color: inherit;
   text-align: center;
-  padding: 0.5em;
-}
-
-nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-  padding-bottom: 0.1em;
+  padding: 0.5em 1em;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-bottom: 3px solid var(--color-accent);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
+nav a.current {
+  border-bottom: 3px solid var(--color-accent);
+}
+
+/* FORM */
 
 input,
 textarea,
@@ -59,11 +66,15 @@ form label {
 form button {
   grid-column: 1 / -1;
 }
+
+/* PROJECTS */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
 }
+
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
@@ -74,20 +85,23 @@ form button {
   margin: 0;
 }
 
-.projects {
-  gap: 1em;
-}
+/* HEADINGS */
 
 h1 {
   font-size: 400%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
 
-/* Resume page styling */
+/* RESUME PAGE STYLING */
 
 section {
   margin-block: 2em;
@@ -136,7 +150,8 @@ strong {
   font-weight: 600;
 }
 
-/* Contact links under your name */
+/* CONTACT LINKS UNDER YOUR NAME */
+
 body > p:first-of-type {
   margin-top: -0.5em;
   margin-bottom: 2em;
@@ -150,4 +165,16 @@ body > p:first-of-type a {
 body > p:first-of-type a:hover {
   color: var(--color-accent);
   text-decoration: underline;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+}
+
+/* make dropdown use same font as site */
+select {
+  font: inherit;
 }
