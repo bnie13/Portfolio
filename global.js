@@ -115,12 +115,15 @@ export async function fetchJSON(url) {
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
 
+  const imagePathPrefix = location.pathname.includes('/projects/') ? '../image/' : 'image/';
+
   projects.forEach(project => {
     const article = document.createElement('article');
+    const imageFileName = project.image.split('/').pop();
 
     article.innerHTML = `
   <${headingLevel}>${project.title}</${headingLevel}>
-  <img src="${project.image}" alt="${project.title}">
+  <img src="${imagePathPrefix}${imageFileName}" alt="${project.title}">
   <div>
     <p>${project.description}</p>
     <p class="project-year">c. ${project.year}</p>
