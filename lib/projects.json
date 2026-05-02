@@ -3,75 +3,75 @@
         {
           "title": "NBA Shooting Efficiency Analysis",
           "year": 2025,
-          "image": "../image/nbaimg1.png",
+          "image": "image/nbaimg1.png",
           "description": "Analyzed player stats using Python and Pandas."
         },
         {
           "title": "League of Legends Match Analysis",
           "year": 2026,
-          "image": "../image/lolimg1.png",
+          "image": "image/lolimg1.png",
           "description": "Built logistic regression model to predict match outcomes."
         },
         {
           "title": "Rush Hour Puzzle Solver",
           "year": 2024,
-          "image": "../image/rushhourimg1.png",
+          "image": "image/rushhourimg1.png",
           "description": "Implemented DFS + backtracking in Java to solve puzzles."
         },
 
         {
           "title": "Persuasive/Deceptive Visualization",
           "year": 2026,
-          "image": "../image/PersuasiveVisualization.png",
+          "image": "image/PersuasiveVisualization.png",
           "description": "Created a persuasive and deceptive data visualization to highlight how design choices can influence interpretation."
         },
 
         {
           "title": "Data Cleaning Pipeline",
           "year": 2023,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Built a data preprocessing pipeline to clean and prepare datasets for analysis."
         },
         {
           "title": "Exploratory Data Analysis",
           "year": 2024,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Performed EDA using visualizations to uncover patterns and trends in data."
         },
         {
           "title": "Regression Model Project",
           "year": 2025,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Developed a regression model to predict outcomes based on multiple features."
         },
         {
           "title": "Interactive Data Dashboard",
           "year": 2026,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Created an interactive dashboard to visualize and explore datasets dynamically."
         },
         {
           "title": "Web Scraping Tool",
           "year": 2023,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Built a Python scraper to collect and organize data from online sources."
         },
         {
           "title": "Classification Model",
           "year": 2024,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Implemented a classification algorithm to categorize data into groups."
         },
         {
           "title": "Time Series Analysis",
           "year": 2025,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Analyzed time-based data to identify trends and make future predictions."
         },
         {
           "title": "Data Visualization Project",
           "year": 2026,
-          "image": "../image/OrangeTabby.png",
+          "image": "image/OrangeTabby.png",
           "description": "Designed clear and effective visualizations to communicate insights from data."
         }
 ]
