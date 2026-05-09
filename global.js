@@ -32,6 +32,7 @@ let pages = [
   { url: "./contact/", title: "Contact" },
   { url: "https://github.com/bnie13", title: "Github" },
   { url: "./resume/", title: "Resume" },
+  { url: "./meta/", title: "Meta" },
 ];
 
 // Create nav
