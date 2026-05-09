@@ -306,3 +306,130 @@ select {
   object-fit: cover;
   border-radius: 8px;
 }
+
+/* ==================== META PAGE ==================== */
+
+/* Summary stats */
+dl.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+  gap: 0.5em 1.5em;
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid oklch(80% 3% 200);
+  border-radius: 8px;
+}
+
+dl.stats dt {
+  grid-row: 1;
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+dl.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* Auto-flow each label/value pair into its own column */
+dl.stats dt:nth-of-type(n) { grid-column: auto; }
+dl.stats dd:nth-of-type(n) { grid-column: auto; }
+
+/* Scatter plot */
+#chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-block: 1em;
+}
+
+.gridlines line {
+  stroke: oklch(80% 3% 200);
+  stroke-opacity: 0.4;
+}
+
+.gridlines path {
+  stroke: none;
+}
+
+/* Dot hover transitions */
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.4);
+}
+
+/* Selected dots (during brushing) */
+circle.selected {
+  fill: #ff6b6b;
+}
+
+/* Tooltip */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  font-size: 0.9rem;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: #666;
+  font-weight: 400;
+  margin: 0;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0.75em 1em;
+  pointer-events: auto;
+  transform: translate(0.75em, 0.75em);
+  z-index: 10;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Brush selection rectangle ("marching ants") */
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#selection-count {
+  margin-top: 1.5em;
+  font-style: italic;
+  color: #555;
+}
