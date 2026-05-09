@@ -309,35 +309,41 @@ select {
 
 /* ==================== META PAGE ==================== */
 
-/* Summary stats */
+/* Summary stats — responsive card grid */
 dl.stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
-  gap: 0.5em 1.25em;
-  padding: 1em;
-  margin: 1em 0;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
   border: 1px solid oklch(80% 3% 200);
   border-radius: 8px;
 }
 
-dl.stats dt {
-  grid-row: 1;
-  font-size: 0.75rem;
+dl.stats .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+dl.stats .stat dt {
+  margin: 0;
+  font-size: 0.72rem;
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  min-width: 0;
+  white-space: normal;
   overflow-wrap: break-word;
+  line-height: 1.2;
 }
 
-dl.stats dd {
-  grid-row: 2;
+dl.stats .stat dd {
   margin: 0;
   font-size: 1.4rem;
-  font-weight: 500;
-  min-width: 0;
-  overflow-wrap: break-word;
+  font-weight: 600;
   line-height: 1.15;
+  overflow-wrap: break-word;
 }
 
 /* Auto-flow each label/value pair into its own column */
