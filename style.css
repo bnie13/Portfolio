@@ -312,8 +312,8 @@ select {
 /* Summary stats */
 dl.stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-  gap: 0.5em 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+  gap: 0.5em 1.25em;
   padding: 1em;
   margin: 1em 0;
   border: 1px solid oklch(80% 3% 200);
@@ -326,13 +326,18 @@ dl.stats dt {
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 dl.stats dd {
   grid-row: 2;
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
+  min-width: 0;
+  overflow-wrap: break-word;
+  line-height: 1.15;
 }
 
 /* Auto-flow each label/value pair into its own column */
