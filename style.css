@@ -309,15 +309,25 @@ select {
 
 /* ==================== META PAGE ==================== */
 
+body.meta-page {
+  max-width: 140ch;
+}
+
 /* Scrollytelling layout */
 #scrolly-1 {
   position: relative;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-#scrolly-1 > * {
-  flex: 1;
+#scrolly-1 > #scatter-story {
+  flex: 1 1 35%;
+  min-width: 0;
+}
+
+#scrolly-1 > #scatter-plot {
+  flex: 2 1 65%;
+  min-width: 0;
 }
 
 #scatter-story {
@@ -330,10 +340,17 @@ select {
 
 #scatter-plot {
   position: sticky;
-  top: 0;
+  top: 1rem;
   left: 0;
   bottom: auto;
-  height: 50vh;
+  height: 85vh;
+  align-self: flex-start;
+}
+
+#scatter-plot #chart svg {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
 }
 
 /* File unit visualization */
