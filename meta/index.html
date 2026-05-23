@@ -14,11 +14,26 @@
   of code, and when those commits happened throughout the day.
 </p>
 
+<label class="slider-label">
+  Show commits until:
+  <input type="range" id="commit-progress" min="0" max="100" value="100">
+  <time id="commit-time"></time>
+</label>
+
 <h2>Summary</h2>
 <div id="stats"></div>
 
 <h2>Commits by time of day</h2>
-<div id="chart"></div>
+
+<div id="scrolly-1">
+  <div id="scatter-story"></div>
+  <div id="scatter-plot">
+    <div id="chart"></div>
+    <p id="selection-count">No commits selected</p>
+    <h2>Language breakdown</h2>
+    <dl id="language-breakdown" class="stats"></dl>
+  </div>
+</div>
 
 <dl id="commit-tooltip" class="info tooltip" hidden>
   <dt>Commit</dt>
@@ -28,7 +43,7 @@
   <dd id="commit-date"></dd>
 
   <dt>Time</dt>
-  <dd id="commit-time"></dd>
+  <dd id="commit-time-of-day"></dd>
 
   <dt>Author</dt>
   <dd id="commit-author"></dd>
@@ -37,10 +52,7 @@
   <dd id="commit-lines"></dd>
 </dl>
 
-<p id="selection-count">No commits selected</p>
-
-<h2>Language breakdown</h2>
-<dl id="language-breakdown" class="stats"></dl>
+<dl id="files"></dl>
 
 <script type="module" src="../global.js"></script>
 <script type="module" src="./main.js"></script>
